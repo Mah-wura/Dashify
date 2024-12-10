@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudConnect</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo-container">
+      
+      <img src="image/Logo.jpg" alt="CloudConnect Logo" class="logo">
+      <h1>CloudConnect</h1>
+    </div>
+    <!-- hamburger-menu  -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+    <nav>
+      <ul class="nav-link">
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </nav>
+    <!-- Search Bar -->
+    <form class="search-bar">
+      <input type="text" placeholder="Search..." aria-label="Search">
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+      <h2>Dashboard</h2>
+      <!-- Followers Overview -->
+      <div class="dashboard-widget">
+         <!-- Followers Overview with Logos -->
+<div class="dashboard-widget">
+  <h3>Followers Overview</h3>
+  <ul>
+    <li>
+      <img src="facebook.png" alt="Facebook Logo" class="social-logo">
+      Facebook: <strong>2,300</strong>
+    </li>
+    <li>
+      <img src="x.png" alt="X Logo" class="social-logo">
+      X: <strong>800</strong>
+    </li>
+    <li>
+      <img src="instagram.png" alt="Instagram Logo" class="social-logo">
+      Instagram: <strong>1,200</strong>
+    </li>
+    <li>
+      <img src="youtube.png" alt="YouTube Logo" class="social-logo">
+      YouTube: <strong>5,400</strong>
+    </li>
+    <li>
+      <img src="tik-tok.png" alt="TikTok Logo" class="social-logo">
+      TikTok: <strong>4,100</strong>
+    </li>
+  </ul>
+</div>
+      <!-- Badge -->
+      <div class="badge">
+  <h3 id="badge-title"> Milestone: 1,000 Followers</h3>
+  <button onclick="generateNewBadge()">Earn New Badge</button>
+</div>
+<!-- Analytics Section -->
+<section id="analytics">
+  <h2>Analytics</h2>
+
+  <!-- Engagement Overview -->
+  <div class="analytics-widget">
+    <h3>Engagement Overview</h3>
+    <p><strong>Likes:</strong> 3,200</p>
+    <p><strong>Comments:</strong> 750</p>
+    <p><strong>Shares:</strong> 540</p>
+  </div>
+
+  <!-- Follower Growth Chart -->
+  <div class="analytics-widget">
+    <h3>Follower Growth</h3>
+    <canvas id="growthChart" width="400" height="200"></canvas>
+  </div>
+
+  <!-- Audience Demographics Chart -->
+  <div class="analytics-widget">
+    <h3>Audience Demographics</h3>
+    <canvas id="demographicsChart" width="400" height="200"></canvas>
+  </div>
+</section>
+
+  <section id="settings">
+  <h2>Settings</h2>
+
+  <!-- Profile Settings -->
+  <div class="settings-widget">
+    <h3>Profile Settings</h3>
+    <form id="profileForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <button type="button" onclick="updateProfile()">Save Changes</button>
+    </form>
+  </div>
+
+  <!-- Theme Settings -->
+  <div class="settings-widget">
+    <h3>Theme Settings</h3>
+    <label>
+      <input type="radio" name="theme" value="light" onclick="changeTheme('light')" checked>
+      Light Mode
+    </label>
+    <label>
+      <input type="radio" name="theme" value="dark" onclick="changeTheme('dark')" >
+      Dark Mode
+    </label>
+  </div>
+
+  <!-- Notification Settings -->
+  <div class="settings-widget">
+    <h3>Notification Settings</h3>
+    <label>
+      <input type="checkbox" id="emailNotifications" checked>
+      Email Notifications
+    </label>
+    <label>
+      <input type="checkbox" id="smsNotifications">
+      SMS Notifications
+    </label>
+    <button type="button" onclick="updateNotifications()">Update Notifications</button>
+  </div>
+</section>
+
+  <!-- Notifications Dropdown -->
+  <div class="notifications">
+    <button class="notification-btn">Notification</button>
+    <ul class="notification-list" style="display: none;">
+      <li>New comment on Instagram</li>
+      <li>You gained 50 followers on Twitter</li>
+      <li>Facebook post reached 10,000 views!</li>
+    </ul>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2024 CloudConnect. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts.js"></script>
+</body>
+</html>

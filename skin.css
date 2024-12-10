@@ -1,0 +1,277 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('image/download\ \(1\).jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+/* Header */
+header {
+  background: gold;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: gray;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  color: gold;
+  margin-bottom: 1.5rem;
+}
+
+/* Widgets */
+.dashboard-widget, .analytics-widget {
+  background: gray;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-widget h3, .analytics-widget h3 {
+  color: gold;
+  margin-bottom: 1rem;
+}
+
+.dashboard-widget ul, .analytics-widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-widget ul li, .analytics-widget ul li {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: gold;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+button:hover {
+  background-color: gold;
+}
+
+/* Charts */
+canvas {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  background: yellow;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: gold;
+  color: #ffffff;
+}
+/* Settings Section */
+.settings-widget {
+  background-color: yellow;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.settings-widget h3 {
+  margin-bottom: 0.5rem;
+}
+
+.settings-widget form {
+  display: flex;
+  flex-direction: column;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+.settings-widget label {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.settings-widget input[type="text"],
+.settings-widget input[type="email"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.settings-widget button {
+  padding: 0.5rem 1rem;
+  background-color: gold;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.settings-widget button:hover {
+  background-color: gold;
+}
+.analytics-widget canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+body.dark-mode {
+  background: #121212;
+  color: #ffffff;
+}
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  border: none;
+  background: gold;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.notifications {
+  position: relative;
+}
+
+.notification-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+}
+
+.notification-list {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notification-list li {
+  padding: 5px 0;
+  font-size: 14px;
+}
+.badge {
+  background: #ffe66d;
+  padding: 10px;
+  border: 1px solid #ffcc00;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 20px 0;
+}
+/* Style for Social Media Logos */
+.social-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.hamburger-menu{
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu div{
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+
+}
+/* Responsive Styling */
+@media(max-width: 768px) {
+
+  .nav-lists{
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      padding: 10px;
+      border-radius: 5px;
+  }
+
+  .nav-lists.active{
+      display: flex;
+  }
+  .hamburger-menu{
+      display: flex;
+  }
+  
+}
